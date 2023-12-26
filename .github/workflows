@@ -1,0 +1,21 @@
+name: Convert Markdown to HTML
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest  # Specify macOS runner
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Convert Markdown to HTML
+      run: pandoc -s -o output.html input.md
+    - name: Commit and push if changed
+      run: |
+        git add -A
+        git commit -m "Convert Markdown to HTML" || exit 0
+        git push
