@@ -4,7 +4,7 @@ author: "Hans Halvorson"
 css: "pandoc2.css"
 ---
 
-# Chapter 2
+# [Deducing](deducing.html)
 
 The proofs in Chapter 2 should *not* use dependency numbers, as they
 are only introduced in Chapter 3. Thus, a correctly written proof will
