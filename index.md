@@ -1,5 +1,7 @@
-# How Logic Works
-
-Additional excercises for *How Logic Works* by Hans Halvorson
+---
+title: "How Logic Works: Exercises"
+author: "Hans Halvorson"
+css: "pandoc2.css"
+---
 
 [deducing](deducing.html)
