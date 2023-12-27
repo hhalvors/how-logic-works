@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Hans Halvorson" />
+  <title>How Logic Works</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="pandoc2.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">How Logic Works</h1>
+<p class="author">Hans Halvorson</p>
+</header>
+<h1 id="chapter-2">Chapter 2</h1>
+<p>The proofs in Chapter 2 should <em>not</em> use dependency numbers,
+as they are only introduced in Chapter 3. Thus, a correctly written
+proof will consist of two columns: the first column contains a line
+number (n) and a formula, the second column contains a justification.
+For example:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(1) <span
+class="math inline"><em>P</em></span></td>
+<td></td>
+<td style="text-align: left;">A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(2) <span
+class="math inline"><em>P</em> ∧ <em>P</em></span></td>
+<td></td>
+<td style="text-align: left;">1,1 <span
+class="math inline">∧</span>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exercise 2.1</strong></p>
+<ol type="1">
+<li><p>Prove that <span
+class="math inline"><em>Q</em> ∧ <em>P</em></span> follows from <span
+class="math inline"><em>P</em> ∧ <em>Q</em></span>. That is, write <span
+class="math inline"><em>P</em> ∧ <em>Q</em></span> on line <span
+class="math inline">(1)</span>, then use the rules (<span
+class="math inline">∧</span> introduction and elimination) repeatedly
+until you obtain <span
+class="math inline"><em>Q</em> ∧ <em>P</em></span>.</p></li>
+<li><p>Prove that <span
+class="math inline"><em>P</em> ∧ (<em>Q</em>∧<em>R</em>)</span> follows
+from <span
+class="math inline">(<em>P</em>∧<em>Q</em>) ∧ <em>R</em></span>.</p></li>
+</ol>
+<p><strong>Exercise 2.2</strong> Prove the following sequents.</p>
+<ol type="1">
+<li><p><span
+class="math inline"><em>P</em> ∧ <em>Q</em> ⊢ <em>Q</em> ∨ <em>R</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ∧ <em>Q</em>  ⊢ (<em>P</em>∨<em>R</em>) ∧ (<em>Q</em>∨<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ⊢ <em>Q</em> ∨ (<em>P</em>∨<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ⊢ (<em>P</em>∨<em>R</em>) ∧ (<em>P</em>∨<em>Q</em>)</span></p></li>
+</ol>
+<p><strong>Exercise 2.3</strong> Prove that the following argument forms
+are valid. You may use the rules <span class="math inline">∧</span>E,
+<span class="math inline">∧</span>I, <span
+class="math inline">∨</span>I, and MP.</p>
+<ol type="1">
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>→<em>R</em>), <em>P</em> → <em>Q</em>, <em>P</em> ⊢ <em>R</em></span></p></li>
+<li><p><span
+class="math inline">(<em>A</em>∨<em>B</em>) → <em>T</em>, <em>Z</em> → <em>A</em>, <em>T</em> → <em>W</em>, <em>Z</em> ⊢ <em>W</em></span></p></li>
+<li><p><span
+class="math inline">(<em>A</em>→<em>B</em>) ∧ (<em>C</em>→<em>A</em>), (<em>C</em>∧(<em>W</em>→<em>Z</em>)) ∧ <em>W</em> ⊢ (<em>B</em>∨<em>D</em>) ∧ (<em>Z</em>∨<em>E</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>P</em>→<em>Q</em>), <em>P</em> ⊢ <em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ∧ (<em>P</em>→<em>Q</em>) ⊢ <em>P</em> ∧ <em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>→<em>R</em>), <em>P</em> ∧ <em>Q</em> ⊢ <em>R</em></span></p></li>
+</ol>
+<p><strong>Exercise 2.4</strong> Prove that <span
+class="math inline"><em>Q</em> → (<em>P</em>→<em>R</em>), ¬<em>R</em> ∧ <em>Q</em> ⊢ ¬<em>P</em></span>.</p>
+<p><strong>Exercise 2.5</strong> Prove the following sequents. Here the
+double turnstile means that you should prove the sequents in both
+directions.</p>
+<ol type="1">
+<li><p><span
+class="math inline"><em>P</em> ∧ (<em>Q</em>∧<em>R</em>)  ⊣ ⊢ (<em>P</em>∧<em>Q</em>) ∧ <em>R</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em>  ⊣ ⊢ <em>P</em> ∧ <em>P</em></span></p></li>
+</ol>
+<!--- Pospesel and Marans have many translation problems http://humbox.edshare.ac.uk/id/eprint/5509 -->
+<p><strong>Exercise 2.6</strong> As we mentioned before, there is only
+an approximate match between symbolic logic and arguments in the wild.
+Nonetheless, to develop your intuitions, it helps sometimes to look at
+an argument in the wild, and to try to represent it symbolically. To
+that end, let’s try our hand at representing the logical form of some
+sentences. Here’s how we do it. First of all, identify the overall
+logical structure of the sentence. Ask yourself: what does the sentence
+assert? Is it an atomic sentence in the sense that there is no internal
+logical complexity? Does it assert the conjunction of two other
+sentences? Does it assert the disjunction of two other sentences?
+Etc.</p>
+<p>For example, the sentence, “The cat is on the mat,” is atomic. In
+this case, the best we can do is to represent it with a single letter
+such as <span class="math inline"><em>P</em></span>. On the other hand,
+“The cat is on the mat, and the dog is in the kennel,” asserts a
+conjunction of two atomic sentences. Thus, it’s best represented as
+something like <span
+class="math inline"><em>P</em> ∧ <em>Q</em></span>.</p>
+<p>For the following sentences, give the most perspicuous representation
+you can of their inner logical form. First identify the component atomic
+sentences, and abbreviate each with a (distinct) letter. Then translate
+the original sentence using the symbols <span
+class="math inline">∨,∧,¬,→</span> for the logical words “or”, “and”,
+“not”, “if…then…”. (We have suggested letters for the atomic sentences
+at the end of each sentence.)</p>
+<ol type="1">
+<li><p>It’s not true that if Ron doesn’t do his homework then Hermione
+will finish it for him. <span
+class="math inline"><em>R</em>, <em>H</em></span></p></li>
+<li><p>Harry will be singed unless he evades the dragon’s fiery breath.
+<span class="math inline"><em>S</em>, <em>E</em></span></p></li>
+<li><p>Aristotle was neither a great philosopher nor a great scientist.
+<span class="math inline"><em>P</em>, <em>S</em></span></p></li>
+<li><p>Mark will get an A in logic only if he does the homework or
+bribes the professor. <span
+class="math inline"><em>A</em>, <em>H</em>, <em>B</em></span></p></li>
+<li><p>Dumbledore will be killed, and either McGonagal will become
+headmistress and Hogwarts will flourish, or else it won’t flourish.
+<span
+class="math inline"><em>K</em>, <em>M</em>, <em>F</em></span></p></li>
+<li><p>Harry and Dumbledore are not both right about the moral status of
+Professor Snape. <span
+class="math inline"><em>H</em>, <em>D</em></span></p></li>
+<li><p>The spell will work only if Hermione concentrates and Ron doesn’t
+interrupt. (<span
+class="math inline"><em>W</em>, <em>C</em>, <em>I</em></span>)</p></li>
+<li><p>Draco will apologize or not get dessert, but he won’t do both.
+(<span class="math inline"><em>A</em>, <em>D</em></span>)</p></li>
+<li><p>The Quidditch match will be canceled if it rains, unless the
+field can be magically dried. (<span
+class="math inline"><em>C</em>, <em>R</em>, <em>M</em></span>)</p></li>
+<li><p>If Taylor Swift expresses support for environmental policies,
+then she will also advocate for renewable energy, unless she prioritizes
+economic concerns. (<span
+class="math inline"><em>E</em>, <em>A</em>, <em>P</em></span>)</p></li>
+<li><p>If Elon Musk innovates in electric car technology or develops new
+space exploration methods, then he will be recognized as a pioneer in
+technology. However, if he fails to achieve progress in either field, he
+will not be recognized as such. (<span
+class="math inline"><em>I</em>, <em>D</em>, <em>R</em></span>)</p></li>
+<li><p>If it is not sunny then we will not go to the beach. (<span
+class="math inline"><em>S</em>, <em>B</em></span>)</p></li>
+<li><p>Either it’s sunny or we will not go to the beach. (<span
+class="math inline"><em>S</em>, <em>B</em></span>)</p></li>
+<li><p>We will not go to the beach if it’s not sunny. (<span
+class="math inline"><em>S</em>, <em>B</em></span>)</p></li>
+<li><p>We will go to the beach only if it’s sunny. (<span
+class="math inline"><em>S</em>, <em>B</em></span>)</p></li>
+<li><p>It’s being sunny is a necessary but not sufficient condition for
+our going to the beach. (<span
+class="math inline"><em>S</em>, <em>B</em></span>)</p></li>
+<li><p>A society does not have free speech unless it allows peaceful
+protests. (<span
+class="math inline"><em>F</em>, <em>P</em></span>)</p></li>
+<li><p>Professor Plum is the murderer unless the weapon was a
+candlestick or the crime occurred in the library. (<span
+class="math inline"><em>P</em>, <em>C</em>, <em>L</em></span>)</p></li>
+<li><p>Professor Plum is the murderer only if the weapon was the
+candlestick and the crime occurred in the library, or the weapon was the
+dagger and the crime didn’t occur in the library. (<span
+class="math inline"><em>P</em>, <em>C</em>, <em>L</em>, <em>D</em></span>)</p></li>
+<li><p>Provided, but only provided, that the French Fleet is sailed
+forthwith for British harbors, His Majesty’s Government give their full
+consent to an armistice for France. (<span
+class="math inline"><em>S</em>, <em>C</em></span>)</p></li>
+<li><p>For the tenability of the thesis that mathematics is logic it is
+not only sufficient but also necessary that all mathematical expressions
+be capable of definition on the basis solely of logical ones.</p></li>
+</ol>
+<p><strong>Exercise 2.6.1</strong> Display the propositional form of the
+following argument. Does it seem valid to you? Does it convince you that
+God does not exist?</p>
+<p>Premise 1: If God exists then he is all good and all powerful.</p>
+<p>Premise 2: If God is all good and all powerful then there would be no
+suffering.</p>
+<p>Premise 3: There is suffering.</p>
+<p>Conclusion: Therefore, God does not exist.</p>
+<p><strong>Exercise 2.6.2</strong> Display the propositional form of the
+following argument. Does it seem valid to you?</p>
+<p>Premise 1: If the murder happened in the kitchen, then the weapon was
+either a knife or a revolver.</p>
+<p>Premise 2: The murder did not happen in the kitchen.</p>
+<p>Conclusion: Therefore, the weapon was neither a knife nor a
+revolver.</p>
+<p><strong>Exercise 2.6.3</strong> Display the propositional structure
+of the following argument.</p>
+<p>Premise 1: The greatest genius of our time must have made
+groundbreaking contributions in multiple advanced fields.</p>
+<p>Premise 2: Elon Musk has made groundbreaking contributions in
+multiple advanced fields, such as space exploration with SpaceX,
+electric vehicles with Tesla, and neural technology with Neuralink.</p>
+<p>Conclusion: Therefore, Elon Musk is the greatest genius of our
+time.</p>
+<p><strong>Exercise 2.7</strong> Prove that the following argument forms
+are valid. Each line of your proof must either be one of the premises
+given, or it must be justified from previous lines by one of our rules
+of inference: MP, MT, DN, <span class="math inline">∧</span>I, <span
+class="math inline">∧</span>E, or <span
+class="math inline">∨</span>I.</p>
+<ol type="1">
+<li><p><span
+class="math inline">¬¬<em>Q</em> → <em>P</em>, ¬<em>P</em> ⊢ ¬<em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>P</em>→<em>Q</em>), <em>P</em> ⊢ <em>Q</em></span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>∧<em>P</em>) → <em>Q</em>, <em>P</em> ⊢ <em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ⊢ <em>Q</em> ∨ (¬¬<em>P</em>∨<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline">¬<em>P</em> → ¬<em>Q</em>, <em>Q</em> ⊢ <em>P</em> ∧ <em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → ¬(<em>Q</em>∨<em>R</em>), <em>Q</em> ⊢ ¬<em>P</em></span></p></li>
+</ol>
+<p><strong>Exercise 2.8</strong> Demonstrate that the following argument
+forms are <em>invalid</em> by providing a counterexample, i.e. give
+English sentences for <span
+class="math inline"><em>P</em>, <em>Q</em>, <em>R</em></span> such that
+the premises are obviously true but the conclusion is obviously
+false.</p>
+<ol type="1">
+<li><p><span
+class="math inline"><em>P</em> → ¬<em>Q</em>, ¬<em>P</em> ⊢ <em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → <em>R</em> ⊢ (<em>P</em>∨<em>Q</em>) → <em>R</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → <em>Q</em> ⊢ <em>Q</em> → <em>P</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → <em>Q</em> ⊢ <em>P</em> → (<em>Q</em>∧<em>R</em>)</span></p></li>
+</ol>
+</body>
+</html>
