@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Hans Halvorson" />
+  <title>How Logic Works: Exercises</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="pandoc2.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title"><a href="index.html">How Logic Works:
+Exercises</a></h1>
+<p class="author">Hans Halvorson</p>
+</header>
+<h1 id="supposing"><a href="supposing.html">Supposing</a></h1>
+<p>The proofs in this chapter require the use of dependency numbers.
+Thus, a correctly written proof consists of three columns with a list of
+dependency numbers in the first column, a line number and a formula in
+the second column, and a justification in the third column. For
+example:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(1) <span
+class="math inline"><em>P</em></span></td>
+<td style="text-align: left;">A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">(2) <span
+class="math inline"><em>Q</em></span></td>
+<td style="text-align: left;">A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1,2</td>
+<td style="text-align: left;">(3) <span
+class="math inline"><em>P</em> ∧ <em>Q</em></span></td>
+<td style="text-align: left;">1,2 <span
+class="math inline">∧</span>I</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(4) <span
+class="math inline"><em>Q</em> → (<em>P</em>∧<em>Q</em>)</span></td>
+<td style="text-align: left;">2,3 CP</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exercise 3.1</strong> Prove the following sequents. (You
+should not use reductio ad absurdum in any of these problems, although
+you might be tempted to do so in 3.1.8, 3.1.9, and 3.1.10. The hints
+explain how the other rules can be used to derive the same things as RA,
+albeit in a much more roundabout way. For the philosophically minded: MT
+is an “impure” rule since its application requires the presence of
+different connectives.)</p>
+<ol type="1">
+<li><p><span
+class="math inline"><em>P</em> ⊢ <em>Q</em> → (<em>P</em>∧<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>→<em>Q</em>) ∧ (<em>P</em>→<em>R</em>) ⊢ <em>P</em> → (<em>Q</em>∧<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>→<em>R</em>) ⊢ <em>Q</em> → (<em>P</em>→<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → <em>Q</em> ⊢ (<em>Q</em>→<em>R</em>) → (<em>P</em>→<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>P</em>→<em>Q</em>) ⊢ <em>P</em> → <em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>→<em>R</em>) ⊢ (<em>P</em>∧<em>Q</em>) → <em>R</em></span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>∨<em>Q</em>) → <em>R</em> ⊢ <em>P</em> → <em>R</em></span></p></li>
+<li><p><span
+class="math inline">¬<em>P</em> ⊢ ¬(<em>P</em>∧<em>Q</em>)</span> (Hint:
+For any sentences <span class="math inline"><em>ϕ</em></span> and <span
+class="math inline"><em>ψ</em></span>, if you can derive <span
+class="math inline"><em>ψ</em> ⊢ <em>ϕ</em></span> then you can derive
+<span class="math inline">¬<em>ϕ</em> ⊢ ¬<em>ψ</em></span>. Indeed,
+apply CP to <span class="math inline"><em>ψ</em> ⊢ <em>ϕ</em></span> to
+derive <span class="math inline"> ⊢ <em>ψ</em> → <em>ϕ</em></span>. Now
+assume <span class="math inline">¬<em>ϕ</em></span> and apply
+MT.)</p></li>
+<li><p><span
+class="math inline">¬(<em>P</em>∨<em>Q</em>) ⊢ ¬<em>P</em> ∧ ¬<em>Q</em></span>
+(Hint: If you can prove <span
+class="math inline">¬(<em>P</em>∨<em>Q</em>) ⊢ ¬<em>P</em></span> and
+<span class="math inline">¬(<em>P</em>∨<em>Q</em>) ⊢ ¬<em>Q</em></span>
+individually, then you can use <span class="math inline">∧</span>I and
+you’re done. )</p></li>
+<li><p><span
+class="math inline"><em>P</em> → ¬<em>P</em> ⊢ ¬<em>P</em></span> (Hint:
+First prove that <span
+class="math inline"><em>P</em> ⊢ (<em>P</em>→¬<em>P</em>) → ¬<em>P</em></span>,
+resulting in a proof with first line “<span
+class="math inline">1 (1) <em>P</em> A</span>” and last line “<span
+class="math inline">1 (<em>n</em>) (<em>P</em>→¬<em>P</em>) → ¬<em>P</em></span>”.
+Now use line 1 again to derive <span
+class="math inline">¬¬<em>P</em></span> and apply MT.)</p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>→<em>R</em>), <em>P</em> → <em>Q</em> ⊢ <em>P</em> → <em>R</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>→<em>R</em>) ⊢ (<em>P</em>→<em>Q</em>) → (<em>P</em>→<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → <em>Q</em> ⊢ ¬<em>Q</em> → ¬<em>P</em></span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>∧<em>Q</em>) → <em>R</em> ⊢ <em>P</em> → (<em>Q</em>→<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>→<em>R</em>) ⊢ <em>P</em> → (¬<em>R</em>→¬<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>→<em>R</em>) ⊢ ¬<em>R</em> → (<em>Q</em>→¬<em>P</em>)</span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>→<em>Q</em>) → <em>P</em> ⊢ (<em>P</em>→<em>Q</em>) → <em>Q</em></span>
+(Hint: Not as difficult as it looks. Assume <span
+class="math inline">(<em>P</em>→<em>Q</em>) → <em>P</em></span> and
+<span class="math inline"><em>P</em> → <em>Q</em></span>. The latter can
+be used both as the antecedent of a conditional, and as a conditional
+itself.)</p></li>
+</ol>
+<p><strong>Exercise 3.2</strong> Prove the following sequents. (Do not
+use reductio ad absurdum, which is only introduced in a subsequent
+section.)</p>
+<ol type="1">
+<li><p><span
+class="math inline">⊢ (<em>P</em>∧<em>Q</em>) → (<em>Q</em>∧<em>P</em>)</span></p></li>
+<li><p><span
+class="math inline">⊢ (<em>P</em>∧<em>Q</em>) → <em>P</em></span></p></li>
+<li><p><span
+class="math inline">⊢ <em>Q</em> → (<em>P</em>→<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline">⊢ <em>Q</em> → (<em>P</em>→<em>P</em>)</span></p></li>
+<li><p><span class="math inline">⊢ <em>P</em> ∨ ¬<em>P</em></span>
+(Hint: This <em>can</em> be proven with the rules we have so far! One
+possibility is to use 3.1.10, but replace <span
+class="math inline"><em>P</em></span> with <span
+class="math inline"><em>P</em> ∨ ¬<em>P</em></span>. In particular, use
+the fact that <span
+class="math inline">¬(<em>P</em>∨¬<em>P</em>) ⊢ <em>P</em></span> to
+derive <span
+class="math inline"> ⊢ ¬(<em>P</em>∨¬<em>P</em>) → ¬¬(<em>P</em>∨¬<em>P</em>)</span>.)</p></li>
+<li><p><span
+class="math inline">¬<em>P</em> ⊢ <em>P</em> → <em>Q</em></span> (Hint:
+Prove <span
+class="math inline">¬<em>P</em> ⊢ ¬<em>Q</em> → ¬<em>P</em></span> and
+then use the contrapositive maneuver.)</p></li>
+<li><p><span
+class="math inline">⊢ (<em>P</em>→<em>Q</em>) → (¬<em>Q</em>→¬<em>P</em>)</span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>→<em>Q</em>) → <em>P</em>, <em>Q</em> ⊢ <em>P</em></span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>→<em>Q</em>) → <em>P</em> ⊢ ¬<em>P</em> → <em>P</em></span></p></li>
+</ol>
+<p><strong>Exercise 3.3</strong> Prove the following sequents. (Still do
+not use RA. It is good to learn to prove directly when you can!)</p>
+<ol type="1">
+<li><p><span
+class="math inline">(<em>P</em>→<em>R</em>) ∧ (<em>Q</em>→<em>R</em>) ⊢ (<em>P</em>∨<em>Q</em>) → <em>R</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ∨ (<em>Q</em>∨<em>R</em>)  ⊣ ⊢ (<em>P</em>∨<em>Q</em>) ∨ <em>R</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ∨ <em>Q</em>, ¬<em>P</em> ⊢ <em>Q</em></span>
+(Hint: Recall that <span
+class="math inline">¬<em>P</em> ⊢ <em>P</em> → <em>Q</em></span>.)</p></li>
+<li><p><span
+class="math inline"><em>P</em> ∧ (<em>Q</em>∨<em>R</em>)  ⊣ ⊢ (<em>P</em>∧<em>Q</em>) ∨ (<em>P</em>∧<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ∨ (<em>Q</em>∧<em>R</em>)  ⊣ ⊢ (<em>P</em>∨<em>Q</em>) ∧ (<em>P</em>∨<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline">¬<em>P</em> ∨ <em>Q</em>  ⊣ ⊢ <em>P</em> → <em>Q</em></span></p></li>
+<li><p><span
+class="math inline">¬<em>P</em> ∨ ¬<em>Q</em> ⊢ ¬(<em>P</em>∧<em>Q</em>)</span></p></li>
+</ol>
+<p><strong>Exercise 3.4</strong> Prove the following sequents.</p>
+<ol type="1">
+<li><p><span
+class="math inline"><em>P</em> → <em>Q</em> ⊢ ¬(<em>P</em>∧¬<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline">¬(<em>P</em>∧<em>Q</em>) ⊢ ¬<em>P</em> ∨ ¬<em>Q</em></span></p></li>
+<li><p><span
+class="math inline">¬(<em>P</em>→<em>Q</em>) ⊢ <em>P</em> ∧ ¬<em>Q</em></span></p></li>
+<li><p><span
+class="math inline"> ⊢ (<em>P</em>→<em>Q</em>) ∨ (<em>Q</em>→<em>P</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>∨<em>R</em>) ⊢ (<em>P</em>→<em>Q</em>) ∨ (<em>P</em>→<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>∧<em>Q</em>) → ¬<em>Q</em> ⊢ <em>P</em> → ¬<em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ∧ ¬<em>Q</em> ⊢ ¬(<em>P</em>→<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline">⊢ ((<em>P</em>→<em>Q</em>)→<em>P</em>) → <em>P</em></span>
+(Hint: One possibility is to first prove <span
+class="math inline"> ⊢ <em>P</em> ∨ ¬<em>P</em></span>, and then argue
+by cases. The first case is easy if you remember “positive paradox”. For
+the second case, remember “negative paradox”, i.e. that <span
+class="math inline">¬<em>P</em></span> implies <span
+class="math inline"><em>P</em> → <em>Q</em></span>.)</p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>∨<em>R</em>) ⊢ ¬<em>R</em> → (¬<em>Q</em>→¬<em>P</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → ¬<em>Q</em> ⊢ (<em>P</em>∧<em>Q</em>) → <em>R</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → ¬<em>Q</em> ⊢ <em>P</em> → (<em>Q</em>→<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline">¬(<em>P</em>→<em>Q</em>) ⊢ <em>P</em> → ¬<em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em>  ⊣ ⊢ (<em>P</em>∧<em>Q</em>) ∨ (<em>P</em>∧¬<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>→<em>R</em>)  ⊣ ⊢ (<em>P</em>→<em>Q</em>) → (<em>P</em>→<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → ¬<em>P</em>  ⊣ ⊢ ¬<em>P</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>→¬<em>Q</em>)  ⊣ ⊢ <em>P</em> → ¬<em>Q</em></span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>→<em>Q</em>) → (<em>P</em>→¬<em>Q</em>)  ⊣ ⊢ <em>P</em> → ¬<em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em>  ⊣ ⊢ <em>P</em> ∧ (<em>Q</em>∨¬<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em>  ⊣ ⊢ <em>P</em> ∨ (<em>Q</em>∧¬<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>→<em>Q</em>) → <em>Q</em> ⊢ (<em>Q</em>→<em>P</em>) → <em>P</em></span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>→<em>Q</em>) → <em>R</em> ⊢ (<em>P</em>→<em>R</em>) → <em>R</em></span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>→<em>R</em>) → <em>R</em>  ⊣ ⊢ <em>P</em> ∨ <em>R</em></span>
+(Hint for <span class="math inline">⊢</span>: it’s easy to derive <span
+class="math inline">¬<em>P</em> → <em>R</em></span> from the sentence on
+the left.)</p></li>
+<li><p><span
+class="math inline">(<em>P</em>→<em>Q</em>) → <em>P</em>  ⊣ ⊢ <em>P</em></span>
+(Hint for <span class="math inline">⊢</span>: assume <span
+class="math inline">¬<em>P</em></span> and derive <span
+class="math inline"><em>P</em> → <em>Q</em></span>.)</p></li>
+</ol>
+<p><strong>Exercise 3.5</strong> People who reject DN elimination also
+tend to reject the law of excluded middle.[^1] This exercise explains
+why. Use the law of excluded middle and EFQ to re-derive DN elimination.
+That is, show that <span
+class="math inline">¬¬<em>P</em> ⊢ <em>P</em></span>, without using DN,
+but where you’re allowed to insert <span
+class="math inline"><em>P</em> ∨ ¬<em>P</em></span>, and where you’re
+allowed to infer anything from a contradiction.</p>
+<p>For discussion: is the law of excluded middle more obviously correct
+than the DN rule?</p>
+<p><strong>Exercise 3.6</strong> An earlier exercise shows that the
+following sequent is provable: <span
+class="math inline"> ⊢ (<em>P</em>→<em>Q</em>) ∨ (<em>Q</em>→<em>P</em>)</span>.
+Give an example of English sentences <span
+class="math inline"><em>P</em></span> and <span
+class="math inline"><em>Q</em></span> where it does <em>not</em> seem
+correct to say that either <span
+class="math inline"><em>P</em> → <em>Q</em></span> or <span
+class="math inline"><em>Q</em> → <em>P</em></span> is true. Discuss what
+this means about the relationship of propositional logic to rational
+thinking.</p>
+<p><strong>Exercise 3.7</strong> Show that <span
+class="math inline"><em>Γ</em> ⊢ ¬(¬<em>ϕ</em>∧¬<em>ψ</em>)</span> can
+be derived from <span class="math inline"><em>Γ</em> ⊢ <em>ϕ</em></span>
+without using the <span class="math inline">∨</span> rules at any
+step.</p>
+<p><strong>Exercise 3.8</strong> Consider the following scenario:</p>
+<p>If <span class="math inline"><em>a</em></span> is at home then so is
+<span class="math inline"><em>b</em></span>.</p>
+<p>Either <span class="math inline"><em>d</em></span> or <span
+class="math inline"><em>e</em></span>, or both are at home.</p>
+<p>Either <span class="math inline"><em>b</em></span> or <span
+class="math inline"><em>c</em></span>, but not both are home.</p>
+<p><span class="math inline"><em>d</em></span> and <span
+class="math inline"><em>c</em></span> are either both at home or both
+not at home.</p>
+<p>If <span class="math inline"><em>e</em></span> is at home then <span
+class="math inline"><em>a</em></span> and <span
+class="math inline"><em>d</em></span> are also at home.</p>
+<p>Using the letter <span class="math inline"><em>X</em></span> for the
+sentence “<span class="math inline"><em>x</em></span> is at home”, write
+these conditions in propositional logic notation. Then prove that there
+is a unique scenario that satisfies these conditions. (Hint: Assume
+<span class="math inline"><em>E</em></span> for RA.)</p>
+<p><strong>Exercise 3.9</strong> Show that the rule MT can be derived
+from the other rules.</p>
+<p><strong>Exercise 3.10</strong> Show that the rule of DN introduction
+can be derived from the other rules.</p>
+<p><strong>Exercise 3.11</strong> We say that a proof is
+<em>intuitionist</em> if it does <em>not</em> use DN elimination — but
+it can use the derived rule EFQ. Show that the following two schema are
+intuitionistically equivalent:</p>
+<ol type="1">
+<li><p><span
+class="math inline">⊢ <em>ψ</em> ∨ ¬<em>ψ</em></span></p></li>
+<li><p><span
+class="math inline"> ⊢ ((<em>ϕ</em>→¬<em>ϕ</em>)→<em>ϕ</em>) → <em>ϕ</em></span></p></li>
+</ol>
+<p>By calling them “schema”, we mean that one is allowed to replace the
+Greek letters with any sentence whatsoever (not just atomic sentences).
+So a schema is an infinite collection of axioms with the same form. (All
+of our inference rules are actually schematic in this sense.)</p>
+<p><strong>Exercise 3.12</strong> Show that there is a formula <span
+class="math inline"><em>χ</em></span> such that for every formula <span
+class="math inline"><em>ϕ</em></span>, <span
+class="math inline"> ⊢ <em>ϕ</em> ↔︎ (<em>χ</em>→<em>ϕ</em>)</span>.</p>
+<p><strong>Exercise 3.13</strong> Show that there is an intuitionistic
+derivation of <span
+class="math inline"> ⊢ <em>P</em> ∨ ¬<em>P</em></span> from the schema
+<span
+class="math inline"><em>ϕ</em> → (<em>ψ</em>∨<em>θ</em>) ⊢ (<em>ϕ</em>→<em>ψ</em>) ∨ (<em>ϕ</em>→<em>θ</em>)</span>.
+Hint: use <span class="math inline"><em>Q</em> ∨ ¬<em>Q</em></span> for
+<span class="math inline"><em>ϕ</em></span>. Supposing that there is no
+intuitionist proof of <span
+class="math inline"> ⊢ <em>P</em> ∨ ¬<em>P</em></span>, argue that there
+is no intuitionist proof of <span
+class="math inline"><em>P</em> → (<em>Q</em>∨<em>R</em>) ⊢ (<em>P</em>→<em>Q</em>) ∨ (<em>P</em>→<em>R</em>)</span>.</p>
+</body>
+</html>

@@ -79,6 +79,8 @@ contains a justification. For example:
 
 3. $P\to Q,Q\to R,\neg R\:\vdash\: \neg P$
 
+4. $P\to Q,\neg P\to R,\neg R\:\vdash \: Q$
+
 
 
 
