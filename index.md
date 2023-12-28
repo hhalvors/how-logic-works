@@ -4,6 +4,6 @@ author: "Hans Halvorson"
 css: "pandoc2.css"
 ---
 
-[deducing](deducing.html)
+1. [**Deducing**](deducing.html)
 
-[supposing](supposing.html)
+2. [**Supposing**](supposing.html)
