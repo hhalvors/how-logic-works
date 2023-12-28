@@ -6,16 +6,17 @@ css: "pandoc2.css"
 
 # [Deducing](deducing.html)
 
-The proofs in Chapter 2 should *not* use dependency numbers, as they
-are only introduced in Chapter 3. Thus, a correctly written proof will
-consist of two columns: the first column contains a line number (n)
-and a formula, the second column contains a justification. For
-example:
+The proofs in Ch. 2 [**deducing**](deducing.html) should *not* use
+dependency numbers, as they are introduced first in Ch. 3
+[**supposing**](supposing.html). So for the purposes of this chapter,
+a correctly written proof will consist of two columns: the first
+column contains a line number (n) and a formula, and the second column
+contains a justification. For example:
 
----------------   ---------  -------------
-(1) $P$                      A
-(2) $P\wedge P$              1,1 $\wedge$I
----------------   ---------  -------------
+-----------------   ---------  -----------------
+(1) $P$                           A
+(2) $P\wedge P$                   1,1 $\wedge$I
+-----------------   ---------  -----------------
 
 
 **Exercise 2.1** ($\wedge$E, $\wedge$I)
@@ -40,6 +41,13 @@ example:
 
 5. $Q\:\vdash\: \neg P\vee Q$
 
+6. $P\:\vdash\: P\wedge (P\vee Q)$
+
+7. $P\:\vdash\: P\wedge (P\wedge P)$
+
+8. $P\:\vdash\: (P\wedge P)\wedge (P\wedge P)$
+
+
 
 **Exercise 2.3** ($\wedge$E, $\wedge$I, $\vee$I, MP)
   
@@ -56,12 +64,22 @@ example:
 
 6. $P\to (Q\to R),P\wedge Q\:\vdash\: R$
 
+7. $P\to Q,(P\wedge Q)\to R,P\: \vdash\: R$
+
+8. $P\to (Q\wedge R),(Q\vee A)\to B,P \:\vdash \: B$
+
+9. $(P\vee Q)\to (A\wedge B),P \:\vdash \: A$
+
 
 **Exercise 2.4** ($\wedge$E, $\wedge$I, $\vee$I, MP, MT)
 
 1. $Q\to (P\to R),\neg R\wedge Q\:\vdash\: \neg P$
 
 2. $P\to Q,\neg Q\:\vdash\: \neg P\wedge \neg Q$
+
+3. $P\to Q,Q\to R,\neg R\:\vdash\: \neg P$
+
+
 
 
 **Exercise 2.5** ($\wedge$E, $\wedge$I, $\vee$I, MP, MT, DN)
@@ -73,6 +91,15 @@ example:
 3. $P\to \neg Q,Q\: \vdash \: \neg P$
 
 4. $\neg \neg P\: \vdash \: \neg \neg P\wedge (P\vee Q)$
+
+5. $\neg (P\wedge Q)\to R,\neg R\:\vdash \: P$
+
+6. $P\to (Q\wedge R),A\to \neg R,P\:\vdash\: \neg A$
+
+7. $\neg P\to\neg Q,Q\:\vdash \: P$
+
+8. $P\:\vdash \: \neg \neg (P\vee Q)$
+
 
 
 <!--- Pospesel and Marans have many translation problems http://humbox.edshare.ac.uk/id/eprint/5509 -->

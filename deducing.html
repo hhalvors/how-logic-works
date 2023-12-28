@@ -32,24 +32,26 @@ Exercises</a></h1>
 <p class="author">Hans Halvorson</p>
 </header>
 <h1 id="deducing"><a href="deducing.html">Deducing</a></h1>
-<p>The proofs in Chapter 2 should <em>not</em> use dependency numbers,
-as they are only introduced in Chapter 3. Thus, a correctly written
-proof will consist of two columns: the first column contains a line
-number (n) and a formula, the second column contains a justification.
-For example:</p>
+<p>The proofs in Ch. 2 <a
+href="deducing.html"><strong>deducing</strong></a> should <em>not</em>
+use dependency numbers, as they are introduced first in Ch. 3 <a
+href="supposing.html"><strong>supposing</strong></a>. So for the
+purposes of this chapter, a correctly written proof will consist of two
+columns: the first column contains a line number (n) and a formula, and
+the second column contains a justification. For example:</p>
 <table>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">(1) <span
 class="math inline"><em>P</em></span></td>
 <td></td>
-<td style="text-align: left;">A</td>
+<td style="text-align: center;">A</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">(2) <span
 class="math inline"><em>P</em> ∧ <em>P</em></span></td>
 <td></td>
-<td style="text-align: left;">1,1 <span
+<td style="text-align: center;">1,1 <span
 class="math inline">∧</span>I</td>
 </tr>
 </tbody>
@@ -84,6 +86,12 @@ class="math inline"><em>P</em> ⊢ <em>Q</em> ∨ (<em>P</em>∨<em>Q</em>
 class="math inline"><em>P</em> ⊢ (<em>P</em>∨<em>R</em>) ∧ (<em>P</em>∨<em>Q</em>)</span></p></li>
 <li><p><span
 class="math inline"><em>Q</em> ⊢ ¬<em>P</em> ∨ <em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ⊢ <em>P</em> ∧ (<em>P</em>∨<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ⊢ <em>P</em> ∧ (<em>P</em>∧<em>P</em>)</span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ⊢ (<em>P</em>∧<em>P</em>) ∧ (<em>P</em>∧<em>P</em>)</span></p></li>
 </ol>
 <p><strong>Exercise 2.3</strong> (<span class="math inline">∧</span>E,
 <span class="math inline">∧</span>I, <span
@@ -101,6 +109,12 @@ class="math inline"><em>P</em> → (<em>P</em>→<em>Q</em>), <em>P</em> 
 class="math inline"><em>P</em> ∧ (<em>P</em>→<em>Q</em>) ⊢ <em>P</em> ∧ <em>Q</em></span></p></li>
 <li><p><span
 class="math inline"><em>P</em> → (<em>Q</em>→<em>R</em>), <em>P</em> ∧ <em>Q</em> ⊢ <em>R</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → <em>Q</em>, (<em>P</em>∧<em>Q</em>) → <em>R</em>, <em>P</em> ⊢ <em>R</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>∧<em>R</em>), (<em>Q</em>∨<em>A</em>) → <em>B</em>, <em>P</em> ⊢ <em>B</em></span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>∨<em>Q</em>) → (<em>A</em>∧<em>B</em>), <em>P</em> ⊢ <em>A</em></span></p></li>
 </ol>
 <p><strong>Exercise 2.4</strong> (<span class="math inline">∧</span>E,
 <span class="math inline">∧</span>I, <span
@@ -110,6 +124,8 @@ class="math inline">∨</span>I, MP, MT)</p>
 class="math inline"><em>Q</em> → (<em>P</em>→<em>R</em>), ¬<em>R</em> ∧ <em>Q</em> ⊢ ¬<em>P</em></span></p></li>
 <li><p><span
 class="math inline"><em>P</em> → <em>Q</em>, ¬<em>Q</em> ⊢ ¬<em>P</em> ∧ ¬<em>Q</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → <em>Q</em>, <em>Q</em> → <em>R</em>, ¬<em>R</em> ⊢ ¬<em>P</em></span></p></li>
 </ol>
 <p><strong>Exercise 2.5</strong> (<span class="math inline">∧</span>E,
 <span class="math inline">∧</span>I, <span
@@ -123,6 +139,14 @@ class="math inline"><em>P</em>  ⊣ ⊢ <em>P</em> ∧ <em>P</em></spa
 class="math inline"><em>P</em> → ¬<em>Q</em>, <em>Q</em> ⊢ ¬<em>P</em></span></p></li>
 <li><p><span
 class="math inline">¬¬<em>P</em> ⊢ ¬¬<em>P</em> ∧ (<em>P</em>∨<em>Q</em>)</span></p></li>
+<li><p><span
+class="math inline">¬(<em>P</em>∧<em>Q</em>) → <em>R</em>, ¬<em>R</em> ⊢ <em>P</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> → (<em>Q</em>∧<em>R</em>), <em>A</em> → ¬<em>R</em>, <em>P</em> ⊢ ¬<em>A</em></span></p></li>
+<li><p><span
+class="math inline">¬<em>P</em> → ¬<em>Q</em>, <em>Q</em> ⊢ <em>P</em></span></p></li>
+<li><p><span
+class="math inline"><em>P</em> ⊢ ¬¬(<em>P</em>∨<em>Q</em>)</span></p></li>
 </ol>
 <!--- Pospesel and Marans have many translation problems http://humbox.edshare.ac.uk/id/eprint/5509 -->
 <p><strong>Exercise 2.6</strong> Let’s try our hand at representing the
