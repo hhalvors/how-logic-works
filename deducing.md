@@ -18,7 +18,7 @@ example:
 ---------------   ---------  -------------
 
 
-**Exercise 2.1**
+**Exercise 2.1** ($\wedge$E, $\wedge$I)
 
 1.  Prove that $Q\wedge P$ follows from $P\wedge Q$. That is, write
     $P\wedge Q$ on line $(1)$, then use the rules ($\wedge$
@@ -28,7 +28,7 @@ example:
 2.  Prove that $P\wedge (Q\wedge R)$ follows from $(P\wedge Q)\wedge R$.
 
 
-**Exercise 2.2** Prove the following sequents.
+**Exercise 2.2** ($\wedge$E, $\wedge$I, $\vee$I)
 
 1.  $P\wedge Q\:\vdash\:Q\vee R$
 
@@ -38,9 +38,10 @@ example:
 
 4.  $P\:\vdash\: (P\vee R)\wedge (P\vee Q)$
 
+5. $Q\:\vdash\: \neg P\vee Q$
 
-**Exercise 2.3** Prove that the following argument forms are valid.
-  You may use the rules $\wedge$E, $\wedge$I, $\vee$I, and MP.
+
+**Exercise 2.3** ($\wedge$E, $\wedge$I, $\vee$I, MP)
   
 1. $P\to (Q\to R),\,P\to Q,\,P\:\vdash\: R$
 
@@ -56,29 +57,31 @@ example:
 6. $P\to (Q\to R),P\wedge Q\:\vdash\: R$
 
 
-**Exercise 2.4** Prove that $Q\to (P\to R),\neg R\wedge Q\:\vdash\:
-\neg P$.
+**Exercise 2.4** ($\wedge$E, $\wedge$I, $\vee$I, MP, MT)
+
+1. $Q\to (P\to R),\neg R\wedge Q\:\vdash\: \neg P$
+
+2. $P\to Q,\neg Q\:\vdash\: \neg P\wedge \neg Q$
 
 
-**Exercise 2.5** Prove the following sequents. Here the double
-turnstile means that you should prove the sequents in both directions.
+**Exercise 2.5** ($\wedge$E, $\wedge$I, $\vee$I, MP, MT, DN)
 
 1. $P\wedge (Q\wedge R)\:\dashv\vdash\: (P\wedge Q)\wedge R$ 
 
 2. $P\:\dashv\vdash\: P\wedge P$
 
+3. $P\to \neg Q,Q\: \vdash \: \neg P$
+
+4. $\neg \neg P\: \vdash \: \neg \neg P\wedge (P\vee Q)$
+
 
 <!--- Pospesel and Marans have many translation problems http://humbox.edshare.ac.uk/id/eprint/5509 -->
 
-**Exercise 2.6** As we mentioned before, there is only an approximate
-match between symbolic logic and arguments in the wild. Nonetheless,
-to develop your intuitions, it helps sometimes to look at an argument
-in the wild, and to try to represent it symbolically. To that end,
-let's try our hand at representing the logical form of some
-sentences. Here's how we do it. First of all, identify the overall
-logical structure of the sentence. Ask yourself: what does the
+**Exercise 2.6** Let's try our hand at representing the logical form
+of some sentences. Here's how we do it. First of all, identify the
+overall logical structure of the sentence. Ask yourself: what does the
 sentence assert? Is it an atomic sentence in the sense that there is
-no internal logical complexity? Does it assert the conjunction of two
+no internal logical complexity?  Does it assert the conjunction of two
 other sentences? Does it assert the disjunction of two other
 sentences? Etc.
 
@@ -204,10 +207,7 @@ vehicles with Tesla, and neural technology with Neuralink.
 Conclusion: Therefore, Elon Musk is the greatest genius of our time.
 
 
-**Exercise 2.7** Prove that the following argument forms are
-valid. Each line of your proof must either be one of the premises
-given, or it must be justified from previous lines by one of our rules
-of inference: MP, MT, DN, $\wedge$I, $\wedge$E, or $\vee$I.
+**Exercise 2.7** ($\wedge$E, $\wedge$I, $\vee$I, MP, MT, DN)
 
 1. $\neg \neg Q\to P,\,\neg P\:\vdash\:\neg Q$
 
@@ -220,6 +220,10 @@ of inference: MP, MT, DN, $\wedge$I, $\wedge$E, or $\vee$I.
 5. $\neg P\to \neg Q,Q\:\vdash\: P\wedge Q$
 
 6. $P\to \neg (Q\vee R),Q\:\vdash \: \neg P$
+
+7. $P\to (Q\to \neg P),P\:\vdash\: \neg Q$
+
+8. $(P\wedge \neg\neg P)\to Q,\, P\:\vdash\: Q$
 
 
 
