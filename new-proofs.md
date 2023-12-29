@@ -39,7 +39,7 @@ where $X,Y$ and $Z$ are well-formed formulas.
 
 
 **Exercise 4.2** Do you think the following claims are true or false?
-  Explain your answers.
+Explain your answers.
 
 1. If $\phi$ is not provable, then no substitution instance of $\phi$
 is provable.
@@ -49,8 +49,8 @@ can be proven.
 
 
 **Exercise 4.3** Prove the following sequents.  You may invoke cut
-  with any named sequent that you have already proven (e.g. lem,
-  positive paradox, negative paradox).
+with any named sequent that you have already proven (e.g. excluded
+middle, positive paradox, negative paradox).
    
 1. $P\leftrightarrow Q\:\vdash\: Q\leftrightarrow P$     
 
@@ -64,4 +64,29 @@ can be proven.
 
 6. $\neg (P\leftrightarrow Q)\:\dashv\vdash\: (P\leftrightarrow \neg Q)$
 
-7. $\vdash\: (P\leftrightarrow Q)\vee (P\leftrightarrow R)\vee (Q\leftrightarrow R)$ 
+7. $\vdash\: (P\leftrightarrow Q)\vee (P\leftrightarrow R)\vee
+ (Q\leftrightarrow R)$ 
+ 
+
+**Exercise 4.4** Identify each equivalence used in the following
+proof.
+
+---  ----------------------------------------      ---------
+1    (1) $(P\to Q)\vee (Q\to P)$                   A
+1    (2) $(\neg P\vee Q)\vee (\neg Q\vee P)$       1 RE
+1    (3) $\neg P\vee (Q\vee (\neg Q\vee P))$       2 RE
+1    (4) $\neg P\vee ((Q\vee \neg Q)\vee P)$       3 RE
+1    (5) $\neg P\vee (P\vee (Q\vee\neg Q))$        4 RE
+1    (6) $(\neg P\vee P)\vee (Q\vee \neg Q)$       5 RE
+1    (7) $(P\vee\neg P)\vee (Q\vee \neg Q)$        6 RE
+---  ----------------------------------------      ---------
+
+
+**Exercise 4.5** Use replacement-style reasoning to convert the
+following sentences to disjunctive normal form.  You might wish to
+consult the equivalences on page ??.
+
+1. $(P\to Q)\vee (Q\to R)$
+
+2. $(P\leftrightarrow Q)\vee (P\leftrightarrow R)\vee
+   (Q\leftrightarrow R)$

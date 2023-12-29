@@ -140,7 +140,7 @@ substitution instance that can be proven.</p></li>
 </ol>
 <p><strong>Exercise 4.3</strong> Prove the following sequents. You may
 invoke cut with any named sequent that you have already proven
-(e.g. lem, positive paradox, negative paradox).</p>
+(e.g. excluded middle, positive paradox, negative paradox).</p>
 <ol type="1">
 <li><p><span
 class="math inline"><em>P</em> ↔︎ <em>Q</em> ⊢ <em>Q</em> ↔︎ <em>P</em></span></p></li>
@@ -156,6 +156,63 @@ class="math inline"><em>P</em> ↔︎ <em>Q</em>, <em>Q</em> ↔︎ <e
 class="math inline">¬(<em>P</em>↔︎<em>Q</em>)  ⊣ ⊢ (<em>P</em>↔︎¬<em>Q</em>)</span></p></li>
 <li><p><span
 class="math inline">⊢ (<em>P</em>↔︎<em>Q</em>) ∨ (<em>P</em>↔︎<em>R</em>) ∨ (<em>Q</em>↔︎<em>R</em>)</span></p></li>
+</ol>
+<p><strong>Exercise 4.4</strong> Identify each equivalence used in the
+following proof.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(1) <span
+class="math inline">(<em>P</em>→<em>Q</em>) ∨ (<em>Q</em>→<em>P</em>)</span></td>
+<td style="text-align: left;">A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(2) <span
+class="math inline">(¬<em>P</em>∨<em>Q</em>) ∨ (¬<em>Q</em>∨<em>P</em>)</span></td>
+<td style="text-align: left;">1 RE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(3) <span
+class="math inline">¬<em>P</em> ∨ (<em>Q</em>∨(¬<em>Q</em>∨<em>P</em>))</span></td>
+<td style="text-align: left;">2 RE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(4) <span
+class="math inline">¬<em>P</em> ∨ ((<em>Q</em>∨¬<em>Q</em>)∨<em>P</em>)</span></td>
+<td style="text-align: left;">3 RE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(5) <span
+class="math inline">¬<em>P</em> ∨ (<em>P</em>∨(<em>Q</em>∨¬<em>Q</em>))</span></td>
+<td style="text-align: left;">4 RE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(6) <span
+class="math inline">(¬<em>P</em>∨<em>P</em>) ∨ (<em>Q</em>∨¬<em>Q</em>)</span></td>
+<td style="text-align: left;">5 RE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(7) <span
+class="math inline">(<em>P</em>∨¬<em>P</em>) ∨ (<em>Q</em>∨¬<em>Q</em>)</span></td>
+<td style="text-align: left;">6 RE</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exercise 4.5</strong> Use replacement-style reasoning to
+convert the following sentences to disjunctive normal form. You might
+wish to consult the equivalences on page ??.</p>
+<ol type="1">
+<li><p><span
+class="math inline">(<em>P</em>→<em>Q</em>) ∨ (<em>Q</em>→<em>R</em>)</span></p></li>
+<li><p><span
+class="math inline">(<em>P</em>↔︎<em>Q</em>) ∨ (<em>P</em>↔︎<em>R</em>) ∨ (<em>Q</em>↔︎<em>R</em>)</span></p></li>
 </ol>
 </body>
 </html>

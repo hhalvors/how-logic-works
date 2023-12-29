@@ -10,3 +10,5 @@ css: "pandoc2.css"
 
 4. [**New Proofs from Old**](new-proofs.html)
 
+5. [**Truth**](truth.html)
+
