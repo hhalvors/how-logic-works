@@ -4,6 +4,9 @@ author: "Hans Halvorson"
 css: "pandoc2.css"
 ---
 
-1. [**Deducing**](deducing.html)
+2. [**Deducing**](deducing.html)
 
-2. [**Supposing**](supposing.html)
+3. [**Supposing**](supposing.html)
+
+4. [**New Proofs from Old**](new-proofs.html)
+
